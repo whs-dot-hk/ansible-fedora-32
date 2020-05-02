@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "sort": "node sort.js"
+    "sort": "node sort.js && npx prettier@2.0.5 . --write"
   },
   "dependencies": {
     "glob": "^7.1.6",
