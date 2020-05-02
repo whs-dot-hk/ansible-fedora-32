@@ -1,0 +1,9 @@
+- hosts: all
+  roles:
+    - borgbackup
+    - chezmoi
+    - golang
+    - gopass
+    - neovim
+    - nvidia
+    - smplayer

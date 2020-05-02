@@ -1,0 +1,5 @@
+- become: "yes"
+  dnf:
+    name: "ffmpeg, mpv, qt5, smplayer"
+    state: present
+  name: Install smplayer

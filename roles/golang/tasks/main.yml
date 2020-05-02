@@ -1,0 +1,7 @@
+- become: "yes"
+  name: Install golang
+  unarchive:
+    creates: /usr/local/go/bin
+    dest: /usr/local
+    remote_src: "yes"
+    src: "https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz"

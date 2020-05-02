@@ -1,0 +1,11 @@
+- become: "yes"
+  name: Install gopass
+  unarchive:
+    creates: /usr/local/bin/gopass
+    dest: /usr/local/bin
+    extra_opts:
+      - "*/gopass"
+      - "--strip-components=1"
+    remote_src: "yes"
+    src: >-
+      https://github.com/gopasspw/gopass/releases/download/v1.8.6/gopass-1.8.6-linux-amd64.tar.gz

@@ -1,0 +1,9 @@
+- become: "yes"
+  name: Install neovim
+  unarchive:
+    creates: /usr/local/bin/nvim
+    dest: /usr/local
+    extra_opts: "--strip-components=1"
+    remote_src: "yes"
+    src: >-
+      https://github.com/neovim/neovim/releases/download/v0.4.3/nvim-linux64.tar.gz
