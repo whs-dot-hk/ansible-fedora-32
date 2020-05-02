@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node sort.js"
+    "sort": "node sort.js"
   },
   "dependencies": {
     "glob": "^7.1.6",
