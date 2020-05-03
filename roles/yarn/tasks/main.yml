@@ -1,13 +1,9 @@
 - args:
-    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
-  name: Install nvm
+    creates: "{{ ansible_env.HOME }}/.nvm"
+  name: Install node
   shell: >-
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh |
-    bash
-- args:
-    creates: "{{ ansible_env.HOME }}/.nvm/versions/node"
-  name: Install node
-  shell: "source {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install node"
+    bash && source {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install node
 - become: "yes"
   get_url:
     dest: /etc/yum.repos.d/yarn.repo
