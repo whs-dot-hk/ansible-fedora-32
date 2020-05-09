@@ -5,6 +5,7 @@
     - chezmoi
     - golang
     - gopass
+    - kubectl
     - neovim
     - nvidia
     - ruby
