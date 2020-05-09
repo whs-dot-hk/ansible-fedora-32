@@ -1,0 +1,14 @@
+- become: "yes"
+  name: Install alacritty
+  unarchive:
+    creates: /usr/local/bin/alacritty
+    dest: /usr/local/bin
+    remote_src: "yes"
+    src: >-
+      https://github.com/alacritty/alacritty/releases/download/v0.4.2/Alacritty-v0.4.2-ubuntu_18_04_amd64.tar.gz
+- become: "yes"
+  get_url:
+    dest: /usr/share/applications/Alacritty.desktop
+    url: >-
+      https://github.com/alacritty/alacritty/releases/download/v0.4.2/Alacritty.desktop
+  name: Install desktop
