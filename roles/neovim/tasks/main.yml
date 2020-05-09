@@ -1,17 +1,17 @@
 - become: "yes"
   name: Install neovim
   unarchive:
-    creates: /usr/local/bin/nvim
-    dest: /usr/local
+    creates: /usr/bin/nvim
+    dest: /usr
     extra_opts: "--strip-components=1"
     remote_src: "yes"
     src: >-
       https://github.com/neovim/neovim/releases/download/v0.4.3/nvim-linux64.tar.gz
 - file:
-    path: "{{ ansible_env.HOME }}/.config/nvim/site/autoload"
+    path: "{{ ansible_env.HOME }}/.local/share/nvim/site/autoload"
     state: directory
   name: Create autoload directory
 - get_url:
-    dest: "{{ ansible_env.HOME }}/.config/nvim/site/autoload/plug.vim"
+    dest: "{{ ansible_env.HOME }}/.local/share/nvim/site/autoload/plug.vim"
     url: "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
   name: Download vim plug
