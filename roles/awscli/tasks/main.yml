@@ -1,0 +1,11 @@
+- name: Download awscli
+  unarchive:
+    creates: "{{ ansible_env.HOME }}/Downloads/aws"
+    dest: "{{ ansible_env.HOME }}/Downloads"
+    remote_src: "yes"
+    src: "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
+- args:
+    creates: /usr/local/bin/aws
+  become: "yes"
+  name: Install awscli
+  shell: "{{ ansible_env.HOME }}/Downloads/aws/install"
