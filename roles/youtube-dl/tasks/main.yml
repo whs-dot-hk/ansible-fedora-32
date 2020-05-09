@@ -1,0 +1,6 @@
+- become: "yes"
+  get_url:
+    dest: /usr/local/bin/youtube-dl
+    mode: "0755"
+    url: "https://yt-dl.org/downloads/latest/youtube-dl"
+  name: Install youtube-dl
