@@ -2,6 +2,7 @@
   roles:
     - alacritty
     - awscli
+    - bazel
     - borgbackup
     - chezmoi
     - golang
