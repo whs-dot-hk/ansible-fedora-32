@@ -4,7 +4,14 @@
   shell: >-
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh |
     bash && source {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install node
-- args:
-    creates: "{{ ansible_env.HOME }}/.yarn"
-  name: Install yarn
-  shell: "curl -o- -L https://yarnpkg.com/install.sh | bash"
+- file:
+    path: "{{ ansible_env.HOME }}/.yarn"
+    state: directory
+  name: Create dot yarn directory
+- name: Install yarn
+  unarchive:
+    creates: "{{ ansible_env.HOME }}/.yarn/bin"
+    dest: "{{ ansible_env.HOME }}/.yarn"
+    extra_opts: "--strip-components=1"
+    remote_src: "yes"
+    src: "https://yarnpkg.com/latest.tar.gz"
