@@ -7,3 +7,9 @@ $ sudo dnf install libXft-devel -y
 $ sudo make clean install
 $ tabbed alacritty --embed
 ```
+
+## Swift
+
+```
+$ sudo dnf install swift-lang -y
+```
