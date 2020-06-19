@@ -1,0 +1,8 @@
+- become: "yes"
+  name: Install deno
+  unarchive:
+    creates: /usr/local/bin/deno
+    dest: /usr/local/bin
+    remote_src: "yes"
+    src: >-
+      https://github.com/denoland/deno/releases/download/v1.1.1/deno-x86_64-unknown-linux-gnu.zip

@@ -5,6 +5,7 @@
     - bazel
     - borgbackup
     - chezmoi
+    - deno
     - golang
     - gopass
     - kubectl
