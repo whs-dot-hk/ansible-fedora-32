@@ -1,0 +1,10 @@
+- become: "yes"
+  name: Install helm
+  unarchive:
+    creates: /usr/local/bin/helm
+    dest: /usr/local/bin
+    extra_opts:
+      - "*/helm"
+      - "--strip-components=1"
+    remote_src: "yes"
+    src: "https://get.helm.sh/helm-v3.3.0-rc.2-linux-amd64.tar.gz"

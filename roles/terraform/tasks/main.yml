@@ -1,0 +1,8 @@
+- become: "yes"
+  name: Install terraform
+  unarchive:
+    creates: /usr/local/bin/terraform
+    dest: /usr/local/bin
+    remote_src: "yes"
+    src: >-
+      https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip

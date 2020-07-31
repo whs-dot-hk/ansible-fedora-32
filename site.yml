@@ -8,9 +8,11 @@
     - deno
     - golang
     - gopass
+    - helm
     - kubectl
     - neovim
     - ruby
     - smplayer
+    - terraform
     - yarn
     - youtube-dl
