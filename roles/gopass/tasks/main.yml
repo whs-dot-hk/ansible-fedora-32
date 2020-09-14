@@ -5,6 +5,7 @@
     dest: /usr/local/bin
     extra_opts:
       - gopass
+      - gopass-jsonapi
     remote_src: "yes"
     src: >-
       https://github.com/gopasspw/gopass/releases/download/v1.10.1/gopass-1.10.1-linux-amd64.tar.gz
