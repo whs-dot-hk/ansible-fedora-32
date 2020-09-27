@@ -2,12 +2,9 @@
   name: Install chezmoi
   unarchive:
     creates: /usr/local/bin/chezmoi
-    dest: /usr
+    dest: /usr/local/bin
     extra_opts:
       - chezmoi
-      - completions/*.bash
-      - "--transform=s,^chezmoi$,local/bin/&,"
-      - "--transform=s,^completions/,share/bash-completion/&,"
     remote_src: "yes"
     src: >-
-      https://github.com/twpayne/chezmoi/releases/download/v1.8.0/chezmoi_1.8.0_linux_amd64.tar.gz
+      https://github.com/twpayne/chezmoi/releases/download/v1.8.5/chezmoi_1.8.5_linux_amd64.tar.gz
