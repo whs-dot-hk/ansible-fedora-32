@@ -4,4 +4,4 @@
     creates: /usr/local/go/bin
     dest: /usr/local
     remote_src: "yes"
-    src: "https://dl.google.com/go/go1.15.2.linux-amd64.tar.gz"
+    src: "https://dl.google.com/go/go1.15.4.linux-amd64.tar.gz"
